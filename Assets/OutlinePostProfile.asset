@@ -1,0 +1,216 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8575752872756908416
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d099b7e507a85245b8fe7dcd99b72f9, type: 3}
+  m_Name: PostProcessOutline2
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  size_inner:
+    overrideState: 1
+    value: 8
+  color_inner:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 1}
+  size_outer:
+    overrideState: 1
+    value: 22.36
+  color_outer:
+    overrideState: 1
+    value: {r: 0.5158575, g: 0.023139905, b: 0.9811321, a: 1}
+  inner_shift_x:
+    overrideState: 1
+    value: 0
+  inner_shift_y:
+    overrideState: 1
+    value: 0
+  outer_shift_x:
+    overrideState: 1
+    value: 2.3
+  outer_shift_y:
+    overrideState: 1
+    value: -4.77
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
+  m_Name: OutlinePostProfile
+  m_EditorClassIdentifier: 
+  settings:
+  - {fileID: 114178475910842986}
+  - {fileID: 7237279844179799391}
+  - {fileID: 7337615132184161426}
+  - {fileID: 286320549931817032}
+  - {fileID: -8575752872756908416}
+  - {fileID: 1577235404359041079}
+--- !u!114 &114178475910842986
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f161f1bfe8d69542a86f8d442c273b8, type: 3}
+  m_Name: PostProcessOutline
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 0
+  scale:
+    overrideState: 1
+    value: 1.51
+  color:
+    overrideState: 1
+    value: {r: 0.01886791, g: 0.01886791, b: 0.01886791, a: 1}
+  depthThreshold:
+    overrideState: 1
+    value: 12.06
+  depthNormalThreshold:
+    overrideState: 1
+    value: 0
+  depthNormalThresholdScale:
+    overrideState: 1
+    value: -12.26
+  normalThreshold:
+    overrideState: 1
+    value: 0.202
+--- !u!114 &286320549931817032
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6050e2d5de785ce4d931e4dbdbf2d755, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  spectralLut:
+    overrideState: 1
+    value: {fileID: 2800000, guid: ae96bac7ad5c77c439db864e7deae382, type: 3}
+    defaultState: 1
+  intensity:
+    overrideState: 1
+    value: 0.774
+  fastMode:
+    overrideState: 0
+    value: 0
+--- !u!114 &1577235404359041079
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2dd2ad42a286d844ad8e96b3ab87a84, type: 3}
+  m_Name: PostProcessHalftone
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 0
+  halftone_tex:
+    overrideState: 1
+    value: {fileID: 2800000, guid: e646a5d3698cd0a47a32db154a1583f8, type: 3}
+    defaultState: 1
+  threshold:
+    overrideState: 1
+    value: 0.5
+--- !u!114 &7237279844179799391
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d65e486e4de6e5448a8fbb43dc8756a0, type: 3}
+  m_Name: Grain
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
+    overrideState: 1
+    value: 1
+  colored:
+    overrideState: 1
+    value: 1
+  intensity:
+    overrideState: 1
+    value: 0.256
+  size:
+    overrideState: 1
+    value: 2.112
+  lumContrib:
+    overrideState: 1
+    value: 0.908
+--- !u!114 &7337615132184161426
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40b924e2dad56384a8df2a1e111bb675, type: 3}
+  m_Name: Vignette
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 0
+  mode:
+    overrideState: 1
+    value: 1
+  color:
+    overrideState: 1
+    value: {r: 1, g: 0, b: 0, a: 1}
+  center:
+    overrideState: 1
+    value: {x: 0.5, y: 0.5}
+  intensity:
+    overrideState: 1
+    value: 0.71
+  smoothness:
+    overrideState: 0
+    value: 0.2
+  roundness:
+    overrideState: 0
+    value: 1
+  rounded:
+    overrideState: 0
+    value: 0
+  mask:
+    overrideState: 1
+    value: {fileID: 2800000, guid: c29fb8511e96dd140b7551448c030b6d, type: 3}
+    defaultState: 1
+  opacity:
+    overrideState: 1
+    value: 0.734
