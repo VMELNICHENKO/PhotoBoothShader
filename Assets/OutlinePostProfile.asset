@@ -21,13 +21,21 @@ MonoBehaviour:
     value: 8
   color_inner:
     overrideState: 1
-    value: {r: 0, g: 0, b: 0, a: 1}
+    value:
+      r: 0
+      g: 0
+      b: 0
+      a: 1
   size_outer:
     overrideState: 1
-    value: 22.36
+    value: 37.6
   color_outer:
     overrideState: 1
-    value: {r: 0.5158575, g: 0.023139905, b: 0.9811321, a: 1}
+    value:
+      r: 0.5158575
+      g: 0.023139905
+      b: 0.9811321
+      a: 1
   inner_shift_x:
     overrideState: 1
     value: 0
@@ -36,30 +44,11 @@ MonoBehaviour:
     value: 0
   outer_shift_x:
     overrideState: 1
-    value: 2.3
+    value: 11.2
   outer_shift_y:
     overrideState: 1
-    value: -4.77
---- !u!114 &11400000
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
-  m_Name: OutlinePostProfile
-  m_EditorClassIdentifier: 
-  settings:
-  - {fileID: 114178475910842986}
-  - {fileID: 7237279844179799391}
-  - {fileID: 7337615132184161426}
-  - {fileID: 286320549931817032}
-  - {fileID: -8575752872756908416}
-  - {fileID: 1577235404359041079}
---- !u!114 &114178475910842986
+    value: 9.13
+--- !u!114 &-4888411752832020013
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -74,25 +63,89 @@ MonoBehaviour:
   active: 1
   enabled:
     overrideState: 1
+    value: 1
+  size_inner:
+    overrideState: 1
+    value: 3.08
+  color_inner:
+    overrideState: 1
+    value: {r: 0, g: 0, b: 0, a: 1}
+  size_outer:
+    overrideState: 1
+    value: 12.68
+  color_outer:
+    overrideState: 1
+    value: {r: 0.7725491, g: 0.5294118, b: 0.79215693, a: 1}
+  inner_shift_x:
+    overrideState: 0
     value: 0
-  scale:
+  inner_shift_y:
+    overrideState: 0
+    value: 0
+  outer_shift_x:
     overrideState: 1
-    value: 1.51
-  color:
+    value: 1.64
+  outer_shift_y:
     overrideState: 1
-    value: {r: 0.01886791, g: 0.01886791, b: 0.01886791, a: 1}
-  depthThreshold:
-    overrideState: 1
-    value: 12.06
-  depthNormalThreshold:
+    value: 2.34
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e6292b2c06870d4495f009f912b9600, type: 3}
+  m_Name: OutlinePostProfile
+  m_EditorClassIdentifier: 
+  settings:
+  - {fileID: 7237279844179799391}
+  - {fileID: 7337615132184161426}
+  - {fileID: 286320549931817032}
+  - {fileID: -4888411752832020013}
+  - {fileID: 9014258357175952776}
+--- !u!114 &114178475910842986
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f161f1bfe8d69542a86f8d442c273b8, type: 3}
+  m_Name: PostProcessOutline
+  m_EditorClassIdentifier: 
+  active: 0
+  enabled:
     overrideState: 1
     value: 0
-  depthNormalThresholdScale:
-    overrideState: 1
-    value: -12.26
-  normalThreshold:
-    overrideState: 1
-    value: 0.202
+  size_inner:
+    overrideState: 0
+    value: 1
+  color_inner:
+    overrideState: 0
+    value: {r: 0, g: 0, b: 0, a: 1}
+  size_outer:
+    overrideState: 0
+    value: 2
+  color_outer:
+    overrideState: 0
+    value: {r: 1, g: 1, b: 1, a: 1}
+  inner_shift_x:
+    overrideState: 0
+    value: 0
+  inner_shift_y:
+    overrideState: 0
+    value: 0
+  outer_shift_x:
+    overrideState: 0
+    value: 0
+  outer_shift_y:
+    overrideState: 0
+    value: 0
 --- !u!114 &286320549931817032
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -182,7 +235,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40b924e2dad56384a8df2a1e111bb675, type: 3}
   m_Name: Vignette
   m_EditorClassIdentifier: 
-  active: 1
+  active: 0
   enabled:
     overrideState: 1
     value: 0
@@ -214,3 +267,29 @@ MonoBehaviour:
   opacity:
     overrideState: 1
     value: 0.734
+--- !u!114 &9014258357175952776
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4112fc2e3213a0440975ef674b155819, type: 3}
+  m_Name: PostProcessBackground
+  m_EditorClassIdentifier: 
+  active: 1
+  enabled:
+    overrideState: 1
+    value: 1
+  back_tex:
+    overrideState: 1
+    value: {fileID: 2800000, guid: 4090a140774469f43a31bac6954c6b34, type: 3}
+    defaultState: 1
+  color_R:
+    overrideState: 1
+    value: {r: 0.30771294, g: 0.16602886, b: 0.38679248, a: 1}
+  color_G:
+    overrideState: 1
+    value: {r: 0.54509807, g: 0.33333334, b: 0.70980394, a: 1}

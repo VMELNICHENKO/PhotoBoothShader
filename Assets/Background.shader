@@ -1,4 +1,4 @@
-﻿Shader "CSShop/PhotoBooth/Halftone"
+﻿Shader "CSShop/PhotoBooth/Background"
 {
 	SubShader
 	{
@@ -15,12 +15,13 @@
 			#include "Packages/com.unity.postprocessing/PostProcessing/Shaders/StdLib.hlsl"
 
 			TEXTURE2D_SAMPLER2D(_MainTex, sampler_MainTex);
-			TEXTURE2D_SAMPLER2D(_HalftoneTex, sampler_HalftoneTex);
+			TEXTURE2D_SAMPLER2D(_BackTex, sampler_BackTex);
 
 			// Data pertaining to _MainTex's dimensions.
 			// https://docs.unity3d.com/Manual/SL-PropertiesInPrograms.html
 			float4 _MainTex_TexelSize;
-
+			float4 _ColorR;
+			float4 _ColorG;
 			struct appdata
 			{
 				float4 vertex : POSITION;
@@ -50,7 +51,11 @@
 			float4 frag(v2f i) : SV_Target
 			{
 
-				float4 c   = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord);
+				float4 c = SAMPLE_TEXTURE2D(_MainTex, sampler_MainTex, i.texcoord);
+				float c_a = saturate(c.a);
+				float4 b = SAMPLE_TEXTURE2D(_BackTex, sampler_BackTex, i.texcoord);
+				c = lerp((_ColorR * b.r) + ( _ColorG * b.g), c, c.a);
+				c.a = c_a;
 				return c;
 			}
 			ENDHLSL

@@ -26,6 +26,7 @@ Shader "CSShop/CSShop_VertexLit_Volume"
 		_RimThreshold("Rim Threshold", Range(0, 1)) = 0.1
 
 		_HalftoneTex("Halftone pattern", 2D) = "black" {}
+		_HalftoneColor("Halftone Color", Color) = (1,1,1,1)
 		_Halftone_Scale("Halftone scale", Float) = 1.0
 		_AmbientColor_Static("Static Ambient Color", Color) = (0,0,0,0)
 		_LightColor_Static("Static Light Color", Color) = (0,0,0,0)
@@ -96,6 +97,7 @@ Shader "CSShop/CSShop_VertexLit_Volume"
 			half4 _MainTex_ST;
 			sampler2D _HalftoneTex;
 			half4 _HalftoneTex_ST;
+			float4 _HalftoneColor;
 			// sampler2D _RimTex;
  			float _Halftone_Scale;
 
@@ -194,9 +196,7 @@ Shader "CSShop/CSShop_VertexLit_Volume"
 				#endif
 
 				albedo.rgb *= i.lmap;
-				albedo.a = _AlphaChanelValue;
 
-				////////
 				float3 normal = normalize(i.worldNormal);
 				float3 viewDir = normalize(i.viewDir);
 
@@ -211,10 +211,8 @@ Shader "CSShop/CSShop_VertexLit_Volume"
 
 				// Samples the shadow map, returning a value in the 0...1 range,
 				// where 0 is in the shadow, and 1 is not.
-				// float shadow = SHADOW_ATTENUATION(i);
 				// Partition the intensity into light and dark, smoothly interpolated
 				// between the two to avoid a jagged break.
-				// float lightIntensity = smoothstep(0, 0.01, NdotL * shadow);
 				float lightIntensity = smoothstep( 0, 0.01, NdotL);
 
 				// Multiply by the main directional light's intensity and color.
@@ -236,11 +234,18 @@ Shader "CSShop/CSShop_VertexLit_Volume"
 				float rimIntensity = rimDot * pow(NdotL, _RimThreshold);
 				rimIntensity = smoothstep(_RimAmount - 0.01, _RimAmount + 0.01, rimIntensity);
 				float4 rim = rimIntensity * _RimColor;
-				float4 halftone_t = tex2D(_HalftoneTex, (i.viewDir - 0.5) * _Halftone_Scale + 0.5);
-				halftone_t.rbg *= halftone_t.a;
-				albedo *= max((light + specular + rim), float4(lerp(_ShadowIntensity.rgb, halftone_t.rgb, halftone_t.a), 1));
-				///////
 
+				//Halftone sample
+				float4 halftone_t = tex2D(_HalftoneTex, (i.viewDir - 0.5) * _Halftone_Scale + 0.5);
+				// Blend
+				halftone_t *= _HalftoneColor;
+				halftone_t.rbg *= halftone_t.a;
+
+				albedo *= max((light + specular + rim), float4(_ShadowIntensity.rgb, 1));
+
+				// Surface Halftone pattern
+				albedo.rgb = lerp(albedo.rgb, halftone_t.rgb, halftone_t.a);
+				albedo.a = _AlphaChanelValue;
 
 				return albedo;
 			}

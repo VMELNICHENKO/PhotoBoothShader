@@ -41,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _HalftoneTex:
-        m_Texture: {fileID: 2800000, guid: ae96bac7ad5c77c439db864e7deae382, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8e89bd28e0d5b334c9af030df5951fbe, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
@@ -81,6 +81,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: -4.8
     - _GlossyReflections: 1
+    - _Halftone_Scale: 43.04
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1
@@ -95,7 +96,7 @@ Material:
     - _RimAmount: 0.385
     - _RimStrength: 2.1
     - _RimThreshold: 1
-    - _ShadowDarknessWeight: 0.36
+    - _ShadowDarknessWeight: 0.286
     - _ShadowDisplacemnt: 1
     - _ShadowON: 0
     - _ShadowSize: 10
@@ -114,14 +115,15 @@ Material:
     - _UseUIAlphaClip: 0
     - _UseVolumeLight: 1
     - _UvShift: 0
-    - _WhiteIntencity: -0.268
+    - _WhiteIntencity: -0.114
     - _ZWrite: 1
     m_Colors:
-    - _AmbientColor: {r: 0.3584906, g: 0.3584906, b: 0.3584906, a: 1}
+    - _AmbientColor: {r: 0.3301887, g: 0.3301887, b: 0.3301887, a: 1}
     - _AmbientColor_Static: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _ColorizeColor: {r: 0, g: 0, b: 0, a: 0}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _HalftoneColor: {r: 0.41509432, g: 0.26824492, b: 0.26824492, a: 0.1254902}
     - _LightColor: {r: 0.8018868, g: 0.8018868, b: 0.8018868, a: 1}
     - _LightColor_Static: {r: 1, g: 1, b: 1, a: 1}
     - _LightDirection: {r: 10.3, g: -0.91, b: 1, a: 1}
@@ -129,5 +131,5 @@ Material:
     - _Recolor: {r: 1, g: 1, b: 1, a: 0.11372549}
     - _RimColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 0.5}
-    - _ShadowIntensity: {r: 0.745283, g: 0.745283, b: 0.745283, a: 1}
+    - _ShadowIntensity: {r: 0.5943396, g: 0.5943396, b: 0.5943396, a: 1}
     - _SpecularColor: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
